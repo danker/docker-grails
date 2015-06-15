@@ -1,4 +1,5 @@
-FROM java:openjdk-8-jdk
+#FROM java:8
+FROM nimmis/java
 MAINTAINER Eric Danker <edanker@riotgames.com>
 
 # In case someone loses the Dockerfile
