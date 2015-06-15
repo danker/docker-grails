@@ -1,12 +1,12 @@
-FROM dockerfile/java:oracle-java7
-MAINTAINER Nicholas Iaquinto <nickiaq@gmail.com>
+FROM java:openjdk-8-jdk
+MAINTAINER Eric Danker <edanker@riotgames.com>
 
 # In case someone loses the Dockerfile
 RUN rm -rf /etc/Dockerfile
 ADD Dockerfile /etc/Dockerfile
 
 # Install Grails
-ENV GRAILS_VERSION 2.4.4
+ENV GRAILS_VERSION 2.5.0
 WORKDIR /usr/lib/jvm
 RUN wget http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-${GRAILS_VERSION}.zip && \
     unzip grails-${GRAILS_VERSION}.zip && \
